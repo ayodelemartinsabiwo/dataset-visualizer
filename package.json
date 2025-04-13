@@ -10,6 +10,10 @@
     "Other"
   ],
   "main": "./out/extension.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/your-repo/dataset-visualizer.git"
+  },
   "contributes": {
     "commands": [
       {

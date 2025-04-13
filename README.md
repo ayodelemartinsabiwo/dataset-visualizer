@@ -1,71 +1,89 @@
-# dataset-visualizer README
+# Dataset Visualizer
 
-This is the README for your extension "dataset-visualizer". After writing up a brief description, we recommend including the following sections.
+Easily visualize datasets directly in Visual Studio Code! This extension supports interactive previews, chart generation, and seamless integration with Pandas DataFrames.
 
 ## Features
 
-Describe specific features of your extension including screenshots of your extension in action. Image paths are relative to this README file.
+- **Interactive Table Previews**
+  Quickly preview CSV and JSON files in an interactive table format.
 
-For example if there is an image subfolder under your extension project workspace:
+- **Chart Generation**
+  Generate bar, line, and scatter plots directly from your data.
 
-\!\[feature X\]\(images/feature-x.png\)
+- **Pandas DataFrame Support**
+  Visualize Python Pandas DataFrames exported as CSV or JSON.
 
-> Tip: Many popular extensions utilize animations. This is an excellent way to show off your extension! We recommend short, focused animations that are easy to follow.
+### Visual Examples
+
+#### Table Preview
+![Demo](images/demo-table.gif)
+
+#### Chart Generation
+![Demo](images/demo-chart.gif)
+
+#### File Type Examples
+<details>
+<summary>CSV Example</summary>
+
+```csv
+name,age,score
+Alice,30,85
+Bob,25,90
+```
+
+</details>
+
+<details>
+<summary>JSON Example</summary>
+
+```json
+[
+  { "name": "Alice", "age": 30, "score": 85 },
+  { "name": "Bob", "age": 25, "score": 90 }
+]
+```
+
+</details>
 
 ## Requirements
 
-If you have any requirements or dependencies, add a section describing those and how to install and configure them.
+- **pnpm**: Install via `npm install -g pnpm`
+- **esbuild**: Install via `pnpm add esbuild`
 
 ## Extension Settings
 
-Include if your extension adds any VS Code settings through the `contributes.configuration` extension point.
-
-For example:
-
 This extension contributes the following settings:
 
-* `myExtension.enable`: Enable/disable this extension.
-* `myExtension.thing`: Set to `blah` to do something.
+- `datasetVisualizer.previewMode`:
+  Choose how to display previews: `"inline"` or `"side-panel"`.
+
+- `datasetVisualizer.defaultChartType`:
+  Set the default chart type: `"bar"`, `"line"`, or `"scatter"`.
+
+## Quick Start
+
+1. Open a CSV or JSON file in VS Code.
+2. Right-click the file → **Preview Dataset**.
+3. Use the sidebar to toggle between table view and chart options.
 
 ## Known Issues
 
-Calling out known issues can help limit users opening duplicate issues against your extension.
+- Large datasets may cause performance issues.
+- Limited support for nested JSON structures.
+
+Please report issues on [GitHub](https://github.com/your-repo/dataset-visualizer/issues). 🙏
 
 ## Release Notes
 
-Users appreciate release notes as you update your extension.
+### 1.1.0
+
+- 🚀 Added chart generation (bar, line, scatter).
+- 🐛 Fixed table rendering for large CSV files.
 
 ### 1.0.0
 
-Initial release of ...
-
-### 1.0.1
-
-Fixed issue #.
-
-### 1.1.0
-
-Added features X, Y, and Z.
+- Initial release with table previews for CSV/JSON.
 
 ---
 
-## Following extension guidelines
-
-Ensure that you've read through the extensions guidelines and follow the best practices for creating your extension.
-
-* [Extension Guidelines](https://code.visualstudio.com/api/references/extension-guidelines)
-
-## Working with Markdown
-
-You can author your README using Visual Studio Code. Here are some useful editor keyboard shortcuts:
-
-* Split the editor (`Cmd+\` on macOS or `Ctrl+\` on Windows and Linux).
-* Toggle preview (`Shift+Cmd+V` on macOS or `Shift+Ctrl+V` on Windows and Linux).
-* Press `Ctrl+Space` (Windows, Linux, macOS) to see a list of Markdown snippets.
-
-## For more information
-
-* [Visual Studio Code's Markdown Support](http://code.visualstudio.com/docs/languages/markdown)
-* [Markdown Syntax Reference](https://help.github.com/articles/markdown-basics/)
-
-**Enjoy!**
+**Enjoy visualizing your datasets!**
