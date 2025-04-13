@@ -1,0 +1,34 @@
+{
+  "name": "dataset-visualizer",
+  "displayName": "Dataset Visualizer",
+  "description": "A VS Code extension to visualize datasets in a Webview.",
+  "version": "1.0.0",
+  "engines": {
+    "vscode": "^1.75.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "dataset-visualizer.openTable",
+        "title": "Open Dataset Table"
+      }
+    ]
+  },
+  "scripts": {
+    "clean": "rimraf node_modules out",
+    "compile": "esbuild src/extension.ts --bundle --outdir=out --platform=node",
+    "watch": "esbuild src/extension.ts --bundle --outdir=out --platform=node --watch"
+  },
+  "devDependencies": {
+    "@types/jest": "^29.5.14",
+    "@types/mocha": "^10.0.10",
+    "@types/node": "^22.14.1",
+    "@types/vscode": "^1.75.0",
+    "rimraf": "^6.0.1",
+    "typescript": "^4.5.5"
+  }
+}
